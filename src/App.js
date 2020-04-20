@@ -2,27 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Button } from 'reactstrap';
-import store from './store';
+import { connect } from 'react-redux';
+
+import Increment from './components/Increment';
 import './App.css';
-
-
-
-const rootElement = document.getElementById('root')
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  rootElement
-)
-
-
 
 
 function App() {
   return (
     <div className="App">
+      <header className="App-header">
+        <increment />
+      </header>
     </div>
   );
 }
-
 export default App;
